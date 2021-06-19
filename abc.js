@@ -1,4 +1,4 @@
-function GetTargetUp(){
+function GetTargetUp11(){
 			var SUPPORT_start = document.getElementById("SUPPORT_start");
 			var SUPPORT_end = document.getElementById("SUPPORT_end");
 			var UP_TURN_POINT = document.getElementById("UP_TURN_POINT");
