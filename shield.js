@@ -5,7 +5,7 @@ function GetSupport(){
 	var SUPPORT_JX = document.getElementById("SUPPORT_JX");
 
 	var aa = Math.sqrt(SUPPORT_start.value*SUPPORT_end.value);
-	var bb = (SUPPORT_end.value -((SUPPORT_end.value-SUPPORT_start.value)*0.764))*(1+0.001);
+	var bb = SUPPORT_end.value -((SUPPORT_end.value-SUPPORT_start.value)*0.738);
 
 	SUPPORT_GZ.value = aa.toFixed(5);
 	SUPPORT_JX.value = bb.toFixed(5);
@@ -21,8 +21,8 @@ function GetForce(){
 	Force_JX.value = 0;
 
 	var Force_aa = Math.sqrt(Force_start.value*Force_end.value);
-	var Force_bb = (Force_start.value-Force_end.value)*0.764;
-	var Force_cc = ((Force_bb*1000 + Force_end.value*1000)/1000) * (1-0.001);
+	var Force_bb = (Force_start.value-Force_end.value)*0.738;
+	var Force_cc = ((Force_bb*1000 + Force_end.value*1000)/1000) ;
 
 	Force_GZ.value = Force_aa.toFixed(5);
 	Force_JX.value = Force_cc.toFixed(5);
@@ -40,13 +40,13 @@ function GetTargetUp(){
 
 	var aa = ((SUPPORT_end.value - UP_TURN_POINT.value)*1.382*1000 + UP_TURN_POINT.value*1000)/1000;
 	var bb = ((SUPPORT_end.value - SUPPORT_start.value)*1000 + UP_TURN_POINT.value*1000)/1000;
-	var cc = ((SUPPORT_end.value - SUPPORT_start.value)*1.618*1000 + UP_TURN_POINT.value*1000)/1000;
+	var cc = ((SUPPORT_end.value - SUPPORT_start.value)*1.5*1000 + UP_TURN_POINT.value*1000)/1000;
 	var dd = ((SUPPORT_end.value - SUPPORT_start.value)*2*1000 + UP_TURN_POINT.value*1000)/1000;
 
-	UP_D1.value = aa.toFixed(4);
-	UP_D2.value = bb.toFixed(4);
-	UP_D3.value = cc.toFixed(4);
-	UP_D4.value = dd.toFixed(4);
+	UP_D1.value = aa.toFixed(5);
+	UP_D2.value = bb.toFixed(5);
+	UP_D3.value = cc.toFixed(5);
+	UP_D4.value = dd.toFixed(5);
 }
 
 function GetTargetDown(){
@@ -61,11 +61,11 @@ function GetTargetDown(){
 
 	var aa = DOWN_TURN_POINT.value - (DOWN_TURN_POINT.value - Force_end.value)*1.382;
 	var bb = DOWN_TURN_POINT.value - (Force_start.value - Force_end.value);
-	var cc = DOWN_TURN_POINT.value - (Force_start.value - Force_end.value)*1.618;
+	var cc = DOWN_TURN_POINT.value - (Force_start.value - Force_end.value)*1.5;
 	var dd = DOWN_TURN_POINT.value - (Force_start.value - Force_end.value)*2;
 
-	DOWN_D1.value = aa.toFixed(4);
-	DOWN_D2.value = bb.toFixed(4);
-	DOWN_D3.value = cc.toFixed(4);
-	DOWN_D4.value = dd.toFixed(4);
+	DOWN_D1.value = aa.toFixed(5);
+	DOWN_D2.value = bb.toFixed(5);
+	DOWN_D3.value = cc.toFixed(5);
+	DOWN_D4.value = dd.toFixed(5);
 }
