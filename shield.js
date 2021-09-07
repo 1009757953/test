@@ -57,7 +57,7 @@ function GetForce(){
 	
 	var c=Number(Force_start);
 	var d=Number(Force_end);
-	var e=d/c;
+	var e=c/d;
 	var g=Math.pow(e, 1/4);
 	var h=Math.sqrt(e);
 	var j=h+g-1;
@@ -66,7 +66,7 @@ function GetForce(){
 	Force_JX.value = 0;
 
 	var Force_aa = Math.sqrt(Force_start*Force_end);
-	var Force_bb=d/j;
+	var Force_bb=j*d;
 
 	Force_GZ.value = Force_aa.toFixed(5);
 	Force_JX.value = Force_bb.toFixed(5);
