@@ -1,3 +1,4 @@
+/*
 function GetSupport(){
 	var SUPPORT_start = document.getElementById("SUPPORT_start");
 	var SUPPORT_end = document.getElementById("SUPPORT_end");
@@ -26,6 +27,49 @@ function GetForce(){
 
 	Force_GZ.value = Force_aa.toFixed(5);
 	Force_JX.value = Force_cc.toFixed(5);
+}
+*/
+function GetSupport(){
+	var SUPPORT_start = document.getElementById("SUPPORT_start").value;
+	var SUPPORT_end = document.getElementById("SUPPORT_end").value;
+	var SUPPORT_GZ = document.getElementById("SUPPORT_GZ");
+	var SUPPORT_JX = document.getElementById("SUPPORT_JX");
+
+	var c=Number(SUPPORT_start);
+	var d=Number(SUPPORT_end);
+	var e=d/c;
+	var g=Math.pow(e, 1/4);
+	var h=Math.sqrt(e);
+	var j=h+g-1;
+
+	var aa = Math.sqrt(SUPPORT_start*SUPPORT_end);
+	var bb=d/j;
+
+	SUPPORT_GZ.value = aa.toFixed(5);
+	SUPPORT_JX.value = bb.toFixed(5);
+}
+
+function GetForce(){
+	var Force_start = document.getElementById("Force_start").value;
+	var Force_end = document.getElementById("Force_end").value;
+	var Force_GZ = document.getElementById("ForceGZ");
+	var Force_JX = document.getElementById("ForceJX");
+	
+	var c=Number(Force_start);
+	var d=Number(Force_end);
+	var e=d/c;
+	var g=Math.pow(e, 1/4);
+	var h=Math.sqrt(e);
+	var j=h+g-1;
+
+	Force_GZ.value = 0;
+	Force_JX.value = 0;
+
+	var Force_aa = Math.sqrt(Force_start*Force_end);
+	var Force_bb=d/j;
+
+	Force_GZ.value = Force_aa.toFixed(5);
+	Force_JX.value = Force_bb.toFixed(5);
 }
 
 function GetTargetUp(){
