@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <head>
+	<title>上涨节奏计算器</title>
+	<script type="text/javascript" src="jzx.js"></script>
+	<script type="text/javascript">
+		document.onkeydown=function (e){
+			var currKey=0,evt=e||window.event;
+			currKey=evt.keyCode||evt.which||evt.charCode;
+			if (currKey == 123) {
+				window.event.cancelBubble = true;
+				window.event.returnValue = false;
+			}
+		}
+	</script>
+
+	<style type="text/css">
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		.bgh {
+			width: 339px;
+			height: 70px;
+			font-size: 20px;
+			text-align:center;
+			background: #ffff00;
+			color:#ff0000;
+		}
+		.bgx {
+			height: 70px;
+			width: 113px;
+			font-size: 20px;
+			text-align:center;
+		}
+		.bgxred {
+			height: 70px;
+			width: 113px;
+			font-size: 20px;
+			text-align:center;
+			color: #ff0000;
+		}
+		.bgxgreen {
+			height: 70px;
+			width: 113px;
+			font-size: 20px;
+			text-align:center;
+			color: #00ff00;
+		}
+		.bgs {
+			height: 280px;
+			width: 113px;
+			font-size: 20px;
+			text-align:center;
+			color: #0000ff;
+		}
+		.bgg {
+			height: 280px;
+			width: 113px;
+			font-size: 20px;
+			text-align:center;
+			color: #0000ff;
+		}
+		.bgxx {
+			height: 70px;
+			width: 113px;
+			font-size: 20px;
+			text-align:center;
+			color:#ff0000;
+		}
+	</style>
+    </head>
+
+	<!--功能：1.测买点；2.测算目标位；-->
+
+    <body bgcolor="affff" align=center oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" onmouseup="document.selection.empty()">
+		<br></br>
+		<a href="https://1009757953.github.io/test/down_jzx.html" target="_blank">下跌节奏计算器</a>
+		<br></br>
+
+        <table border=0 align=center cellspacing="0" cellpadding="0">
+			<tr>
+                <td colspan="3">
+                    <input type="text" readonly="readonly" value="上涨节奏计算器" class="bgh">
+                </td>
+            </tr>
+
+			<!--输入起点 高点  低点  新节奏 计算按钮-->
+			<tr>
+				<td>
+					<input type="text" readonly="readonly" value="上涨起点" class="bgxred">
+				</td>
+				<td>
+					<input type="text" value=0 id="yi" class="bgx">
+				</td>
+				<td rowspan="4">
+					<input type="button" value="计算节奏" onclick="js1()" class="bgs">
+				</td>		
+			</tr>
+
+			<tr>
+				<td>
+					<input type="text" readonly="readonly" value="上涨高点" class="bgxred">
+				</td>
+
+				<td>
+					<input type="text" value=0 id="er" class="bgx">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="text" readonly="readonly" value="回撤低点" class="bgxred">
+				</td>
+
+				<td>
+					<input type="text" value=0 id="san" class="bgx">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="text" readonly="readonly" value="新节奏" class="bgxgreen">
+				</td>
+
+				<td>
+					<input type="text" readonly="readonly" value=0 id="res" class="bgxx">
+				</td>
+			</tr>
+
+
+			<!--节奏-->
+            <tr>
+                <td>
+                    <input type="text" readonly="readonly" value="原始节奏" class="bgx">
+                </td>
+				<td>
+					<input type="text" value=0 id="res0" class="bgx">
+				</td>
+                <td>
+                    <input type="text" readonly="readonly" value=0 id="res01" class="bgxx">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" readonly="readonly" value="第一节奏" class="bgx">
+                </td>
+				<td>
+					<input type="text" value=0 id="res1" class="bgx">
+				</td>
+                <td>
+                    <input type="text" readonly="readonly" value=0 id="res11" class="bgxx">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" readonly="readonly" value="第二节奏" class="bgx">
+                </td>
+				<td>
+					<input type="text" value=0 id="res2" class="bgx">
+				</td>
+                <td>
+                    <input type="text" readonly="readonly" value=0 id="res21" class="bgxx">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" readonly="readonly" value="第三节奏" class="bgx">
+                </td>
+				<td>
+					<input type="text" value=0 id="res3" class="bgx">
+				</td>
+                <td>
+                    <input type="text" readonly="readonly" value=0 id="res31" class="bgxx">
+                </td>
+            </tr>
+		</table>
+
+ </body>
+</html>
