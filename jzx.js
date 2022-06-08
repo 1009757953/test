@@ -8,7 +8,7 @@ function js1() {
 		var e = Number(b)-Number(a);
 		var f = Number(d)/Number(e);
 
-		document.getElementById("res").value=f.toFixed(4);
+		document.getElementById("res").value=f.toFixed(5);
 	}
 
 	var x = document.getElementById("yi").value;
@@ -24,25 +24,25 @@ function js1() {
 
 	if(a!=='0'){
 		var z=y-(Number(a)*y-Number(a)*x);
-		document.getElementById("res01").value=z.toFixed(4);
+		document.getElementById("res01").value=z.toFixed(5);
 	}else{
 		document.getElementById("res01").value=0;
 	}
 	if(b!=='0'){
 		var z=y-(Number(b)*y-Number(b)*x);
-		document.getElementById("res11").value=z.toFixed(4);
+		document.getElementById("res11").value=z.toFixed(5);
 	}else{
 		document.getElementById("res11").value=0;
 	}
 	if(c!=='0'){
 		var z=y-(Number(c)*y-Number(c)*x);
-		document.getElementById("res21").value=z.toFixed(4);
+		document.getElementById("res21").value=z.toFixed(5);
 	}else{
 		document.getElementById("res21").value=0;
 	}
 	if(d!=='0'){
 		var z=y-(Number(d)*y-Number(d)*x);
-		document.getElementById("res31").value=z.toFixed(4);
+		document.getElementById("res31").value=z.toFixed(5);
 	}else{
 		document.getElementById("res31").value=0;
 	}
@@ -58,7 +58,7 @@ function js2() {
 		var e = Number(a)-Number(b);
 		var f = Number(d)/Number(e);
 
-		document.getElementById("result").value=f.toFixed(4);
+		document.getElementById("result").value=f.toFixed(5);
 	}
 
 	var x = document.getElementById("si").value;
@@ -74,25 +74,25 @@ function js2() {
 
 	if(a!=='0'){
 		var z=y+Number(a)*x-Number(a)*y;
-		document.getElementById("result01").value=z.toFixed(4);
+		document.getElementById("result01").value=z.toFixed(5);
 	}else{
 		document.getElementById("result01").value='0';
 	}
 	if(b!=='0'){
 		var z=y+Number(b)*x-Number(b)*y;
-		document.getElementById("result11").value=z.toFixed(4);
+		document.getElementById("result11").value=z.toFixed(5);
 	}else{
 		document.getElementById("result11").value='0';
 	}
 	if(c!=='0'){
 		var z=y+Number(c)*x-Number(c)*y;
-		document.getElementById("result21").value=z.toFixed(4);
+		document.getElementById("result21").value=z.toFixed(5);
 	}else{
 		document.getElementById("result21").value='0';
 	}
 	if(d!=='0'){
 		var z=y+Number(d)*x-Number(d)*y;
-		document.getElementById("result31").value=z.toFixed(4);
+		document.getElementById("result31").value=z.toFixed(5);
 	}else{
 		document.getElementById("result31").value='0';
 	}
